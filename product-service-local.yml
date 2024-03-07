@@ -25,7 +25,7 @@ my:
 #       enabled: ALWAYS
 
 server:
-  port: 9000
+  port: 8999
 
 eureka:
   client:
