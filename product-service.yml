@@ -1,10 +1,15 @@
 spring:
   security:
-  oauth2:
-    resourceserver:
-      jwt:
-        issuer-uri: http://localhost:8085/realms/micro
-        jwk-set-key: http://localhost:8085/realms/micro/protocol/openid-connect/certs
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/micro
+          jwk-set-key: http://localhost:8085/realms/micro/protocol/openid-connect/certs
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
   datasource:
     url: jdbc:mysql://localhost:3306/microservice_product
     username: root
@@ -33,3 +38,9 @@ eureka:
 logging:
   level:
     root: INFO
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
