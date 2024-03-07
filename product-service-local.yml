@@ -4,12 +4,12 @@ my:
     values: ["1", "2", "3"]
 
 spring:
-    security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8085/realms/micro
-          jwk-set-key: http://localhost:8085/realms/micro/protocol/openid-connect/certs
+  security:
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: http://localhost:8085/realms/micro
+        jwk-set-key: http://localhost:8085/realms/micro/protocol/openid-connect/certs
   datasource:
     url: jdbc:mysql://localhost:3306/microservice_product
     username: root
