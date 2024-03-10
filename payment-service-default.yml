@@ -1,2 +1,8 @@
 server:
   port: 9400
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: micro_payments
