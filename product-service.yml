@@ -1,10 +1,17 @@
+application:
+  config:
+    server: http://localhost:8888
+  keycloak:
+    server: http://localhost:8085
+    realm: master
+
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8085/realms/micro
-          jwk-set-key: http://localhost:8085/realms/micro/protocol/openid-connect/certs
+          issuer-uri: ${application.keycloak.server}/realms/${application.keycloak.realm}
+          jwk-set-key: ${application.keycloak.server}/realms/${application.keycloak.realm}/protocol/openid-connect/certs
   sleuth:
     sampler:
       percentage: 1.0
