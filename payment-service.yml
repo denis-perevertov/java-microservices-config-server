@@ -1,2 +1,8 @@
 server:
   port: 9400
+
+application:
+  braintree:
+    merchantId: 5zqrszjkby8zd8yn
+    publicKey: byyybwvjpwyyqq7f
+    privateKey: aac880bc1e68e72b384db914e2367a28
